@@ -1,7 +1,6 @@
-# 📊 AI Jobs Power BI Dashboards
+# 📊 AI Jobs Analytics Dashboard — Power BI, Power Query & DAX
 
-This repository contains interactive **Power BI dashboards** analyzing the AI job market in 2025.  
-The dashboards highlight job demand, compensation, skills, and experience requirements for AI-related roles.
+This project uses **Power BI** to turn an 8.2K-record AI jobs dataset into interactive reporting on job demand, compensation, skill requirements, and experience. The focus is not only on building visuals, but on preparing the source data in **Power Query** and defining reusable reporting logic with **DAX**.
 
 ---
 
@@ -15,6 +14,19 @@ The purpose of this project is to answer two key questions for **job seekers and
    - Students & job seekers exploring AI/data careers  
    - Professionals considering role transitions  
    - Recruiters and hiring managers analyzing skill trends  
+
+---
+
+## 🧱 Data Preparation & Model Layer
+
+The reporting workflow separates source-data preparation from the calculations shown to users.
+
+- **Power Query** cleans and shapes the source job records before they reach the report layer.
+- **DAX measures and parameters** define reusable calculations for metrics such as job count, compensation, and experience rather than hard-coding values into individual visuals.
+- **Slicers** let users change the report context by job title and country, while **drill-through pages** carry that context into detailed role-level analysis.
+- The two `.pbix` files in this repository contain the working Power BI reports, so the underlying report design can be inspected directly in Power BI Desktop.
+
+This structure makes the dashboard easier to explore and keeps the reporting logic separate from the raw source data.
 
 ---
 
@@ -72,11 +84,12 @@ The purpose of this project is to answer two key questions for **job seekers and
 ---
 
 ## ⚙️ Technical Details
-- **Tool:** Microsoft Power BI  
-- **Dataset:** Custom AI job dataset (`ai_job_dataset.csv`)  
-- **Data Cleaning & Modeling:** Power Query  
-- **Calculations:** DAX Measures (explicit measures, parameters)  
-- **Visualizations:** Cards, Bar Charts, Line Graphs, Scatterplots, Matrix Tables, Drill-through Pages  
+- **Reporting platform:** Microsoft Power BI
+- **Source data:** `ai_job_dataset.csv` with approximately 8.2K job records
+- **Data preparation:** Power Query
+- **Reporting logic:** explicit DAX measures and parameters
+- **Interaction design:** slicers and drill-through pages
+- **Visuals:** KPI cards, bar charts, line graphs, scatterplots, and matrix tables  
 
 ---
 
